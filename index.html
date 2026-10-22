@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRIZEN — Giveaways</title>
+<meta name="description" content="Discover giveaways and prizes on PRIZEN.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#090a10;color:#f5f5fa;font-family:Arial,sans-serif}
+header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #252631}
+.logo{font-size:27px;font-weight:900;letter-spacing:3px}
+.logo span{color:#a78bfa}
+nav a{color:#bbb;text-decoration:none;margin-left:18px;font-size:14px}
+.hero{text-align:center;padding:90px 20px 70px;background:radial-gradient(ellipse at top,#28204c 0%,#090a10 70%)}
+.tag{display:inline-block;border:1px solid #6650a4;color:#c4b5fd;padding:8px 14px;border-radius:30px;font-size:12px;margin-bottom:25px}
+h1{font-size:clamp(42px,8vw,76px);font-weight:900;letter-spacing:-3px;line-height:1.05}
+h1 span{color:#a78bfa}
+.hero p{color:#aaaebd;max-width:520px;margin:22px auto;line-height:1.7}
+.btn{display:inline-block;background:#8b5cf6;color:white;padding:14px 23px;border-radius:9px;text-decoration:none;font-weight:bold;margin-top:12px}
+.btn:hover{background:#7043dc}
+section{padding:55px 7%}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:25px}
+h2{font-size:25px}
+.muted{color:#9294a5;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:#12131d;border:1px solid #292a38;border-radius:15px;padding:25px;transition:.2s}
+.card:hover{border-color:#8b5cf6;transform:translateY(-3px)}
+.prize-icon{font-size:40px;margin-bottom:20px}
+.status{color:#c4b5fd;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+.card h3{font-size:20px;margin:12px 0}
+.card p{color:#999daf;font-size:14px;line-height:1.6}
+.card .btn{width:100%;text-align:center;margin-top:22px}
+.notice{border:1px solid #292a38;border-radius:12px;padding:22px;color:#aaaebd;line-height:1.7;font-size:14px}
+footer{padding:30px 7%;border-top:1px solid #252631;color:#888;font-size:13px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+footer a{color:#c4b5fd}
+@media(max-width:500px){nav a{margin-left:10px;font-size:12px}.hero{padding-top:65px}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">PRI<span>ZEN</span></div>
+  <nav><a href="#giveaways">Giveaways</a><a href="#about">About</a></nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="tag">WELCOME TO PRIZEN</div>
+    <h1>Big prizes.<br><span>Real chances.</span></h1>
+    <p>Your next favorite giveaway starts here. Explore PRIZEN as we prepare our first official giveaways.</p>
+    <a class="btn" href="#giveaways">Explore Giveaways ↓</a>
+  </div>
+
+  <section id="giveaways">
+    <div class="section-head">
+      <div><h2>Featured Giveaways</h2><p class="muted" style="margin-top:8px">New opportunities are coming.</p></div>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="prize-icon">🎮</div>
+        <div class="status">Coming soon</div>
+        <h3>Gaming Giveaway</h3>
+        <p>Our first gaming-related giveaway will be announced here.</p>
+        <a class="btn" href="#about">Learn More</a>
+      </article>
+      <article class="card">
+        <div class="prize-icon">🎁</div>
+        <div class="status">Coming soon</div>
+        <h3>Community Giveaway</h3>
+        <p>A chance for the PRIZEN community to celebrate together.</p>
+        <a class="btn" href="#about">Learn More</a>
+      </article>
+      <article class="card">
+        <div class="prize-icon">✨</div>
+        <div class="status">Coming soon</div>
+        <h3>Special Rewards</h3>
+        <p>Stay tuned for future prize announcements and events.</p>
+        <a class="btn" href="#about">Learn More</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 style="margin-bottom:20px">About PRIZEN</h2>
+    <div class="notice">
+      PRIZEN is a new giveaway project in development. This website is an early preview. No giveaways are currently open, and no prizes are guaranteed. Official rules, eligibility requirements, deadlines, and winner selection details will be published before any giveaway launches.
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 PRIZEN</span>
+  <span>Built for the community · <a href="#about">About PRIZEN</a></span>
+</footer>
+</body>
+</html>
