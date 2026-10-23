@@ -3,95 +3,165 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PRIZEN — Giveaways</title>
-<meta name="description" content="Discover giveaways and prizes on PRIZEN.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#09090d">
+<title>PRIZEN — Giveaways & Community</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#090a10;color:#f5f5fa;font-family:Arial,sans-serif}
-header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #252631}
-.logo{font-size:27px;font-weight:900;letter-spacing:3px}
-.logo span{color:#a78bfa}
-nav a{color:#bbb;text-decoration:none;margin-left:18px;font-size:14px}
-.hero{text-align:center;padding:90px 20px 70px;background:radial-gradient(ellipse at top,#28204c 0%,#090a10 70%)}
-.tag{display:inline-block;border:1px solid #6650a4;color:#c4b5fd;padding:8px 14px;border-radius:30px;font-size:12px;margin-bottom:25px}
-h1{font-size:clamp(42px,8vw,76px);font-weight:900;letter-spacing:-3px;line-height:1.05}
-h1 span{color:#a78bfa}
-.hero p{color:#aaaebd;max-width:520px;margin:22px auto;line-height:1.7}
-.btn{display:inline-block;background:#8b5cf6;color:white;padding:14px 23px;border-radius:9px;text-decoration:none;font-weight:bold;margin-top:12px}
-.btn:hover{background:#7043dc}
-section{padding:55px 7%}
-.section-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:25px}
-h2{font-size:25px}
-.muted{color:#9294a5;font-size:13px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.card{background:#12131d;border:1px solid #292a38;border-radius:15px;padding:25px;transition:.2s}
-.card:hover{border-color:#8b5cf6;transform:translateY(-3px)}
-.prize-icon{font-size:40px;margin-bottom:20px}
-.status{color:#c4b5fd;font-size:11px;text-transform:uppercase;letter-spacing:1px}
-.card h3{font-size:20px;margin:12px 0}
-.card p{color:#999daf;font-size:14px;line-height:1.6}
-.card .btn{width:100%;text-align:center;margin-top:22px}
-.notice{border:1px solid #292a38;border-radius:12px;padding:22px;color:#aaaebd;line-height:1.7;font-size:14px}
-footer{padding:30px 7%;border-top:1px solid #252631;color:#888;font-size:13px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-footer a{color:#c4b5fd}
-@media(max-width:500px){nav a{margin-left:10px;font-size:12px}.hero{padding-top:65px}h1{letter-spacing:-2px}}
+:root {
+  --bg: #09090d;
+  --panel: #14141d;
+  --purple: #9657ff;
+  --text: #f8f7ff;
+  --muted: #aaa6ba;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+header {
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #292433;
+}
+.logo { font-size: 25px; font-weight: 900; letter-spacing: 3px; }
+.logo span { color: var(--purple); }
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 14px;
+}
+.hero {
+  text-align: center;
+  padding: 100px 20px 85px;
+  background: radial-gradient(ellipse at top, #342052 0%, var(--bg) 68%);
+}
+.tag {
+  color: #d1b8ff;
+  border: 1px solid #62408e;
+  border-radius: 30px;
+  padding: 8px 14px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+h1 { font-size: clamp(42px, 9vw, 76px); margin: 28px 0 16px; }
+h1 span { color: var(--purple); }
+.hero p { color: var(--muted); line-height: 1.7; }
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  margin: 12px 5px;
+  border-radius: 9px;
+  background: var(--purple);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+.btn.secondary { background: #24212e; border: 1px solid #454052; }
+section { padding: 55px 7%; }
+.section-title { font-size: 28px; margin-bottom: 8px; }
+.subtitle { color: var(--muted); margin-bottom: 28px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid #302a3d;
+  border-radius: 15px;
+  padding: 24px;
+}
+.prize { font-size: 35px; }
+.card h3 { margin-bottom: 8px; }
+.card p { color: var(--muted); line-height: 1.6; }
+.status { color: #c8a8ff; font-size: 12px; letter-spacing: 1px; }
+.rules { color: var(--muted); line-height: 1.9; }
+footer {
+  padding: 30px 7%;
+  border-top: 1px solid #292433;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+@media(max-width: 520px) {
+  header { padding: 18px 5%; }
+  nav a { margin-left: 9px; font-size: 12px; }
+  .hero { padding-top: 75px; }
+}
 </style>
 </head>
 <body>
 <header>
   <div class="logo">PRI<span>ZEN</span></div>
-  <nav><a href="#giveaways">Giveaways</a><a href="#about">About</a></nav>
+  <nav>
+    <a href="#giveaways">Giveaways</a>
+    <a href="#rules">Rules</a>
+  </nav>
 </header>
 
 <main>
-  <div class="hero">
-    <div class="tag">WELCOME TO PRIZEN</div>
-    <h1>Big prizes.<br><span>Real chances.</span></h1>
-    <p>Your next favorite giveaway starts here. Explore PRIZEN as we prepare our first official giveaways.</p>
-    <a class="btn" href="#giveaways">Explore Giveaways ↓</a>
-  </div>
+  <section class="hero">
+    <span class="tag">GAMING · COMMUNITY · REWARDS</span>
+    <h1>YOUR NEXT WIN<br>STARTS <span>HERE.</span></h1>
+    <p>Welcome to PRIZEN. Discover giveaways, connect with the community,<br>
+    and keep an eye out for upcoming rewards.</p>
+    <a class="btn" href="#giveaways">Explore Giveaways</a>
+    <a class="btn secondary" href="#community">Join the Community</a>
+  </section>
 
   <section id="giveaways">
-    <div class="section-head">
-      <div><h2>Featured Giveaways</h2><p class="muted" style="margin-top:8px">New opportunities are coming.</p></div>
-    </div>
+    <h2 class="section-title">Featured Giveaways</h2>
+    <p class="subtitle">Check each listing for its official status and entry details.</p>
     <div class="grid">
       <article class="card">
-        <div class="prize-icon">🎮</div>
-        <div class="status">Coming soon</div>
-        <h3>Gaming Giveaway</h3>
-        <p>Our first gaming-related giveaway will be announced here.</p>
-        <a class="btn" href="#about">Learn More</a>
+        <div class="prize">🎮</div>
+        <div class="status">COMING SOON</div>
+        <h3>Gaming Rewards</h3>
+        <p>Gaming-related prizes and rewards. Details will be announced when a real giveaway is available.</p>
       </article>
       <article class="card">
-        <div class="prize-icon">🎁</div>
-        <div class="status">Coming soon</div>
-        <h3>Community Giveaway</h3>
-        <p>A chance for the PRIZEN community to celebrate together.</p>
-        <a class="btn" href="#about">Learn More</a>
+        <div class="prize">💜</div>
+        <div class="status">COMING SOON</div>
+        <h3>Community Rewards</h3>
+        <p>Community events and future rewards for PRIZEN members.</p>
       </article>
       <article class="card">
-        <div class="prize-icon">✨</div>
-        <div class="status">Coming soon</div>
-        <h3>Special Rewards</h3>
-        <p>Stay tuned for future prize announcements and events.</p>
-        <a class="btn" href="#about">Learn More</a>
+        <div class="prize">✨</div>
+        <div class="status">COMING SOON</div>
+        <h3>Special Events</h3>
+        <p>Watch this page for published prizes, eligibility requirements and deadlines.</p>
       </article>
     </div>
   </section>
 
-  <section id="about">
-    <h2 style="margin-bottom:20px">About PRIZEN</h2>
-    <div class="notice">
-      PRIZEN is a new giveaway project in development. This website is an early preview. No giveaways are currently open, and no prizes are guaranteed. Official rules, eligibility requirements, deadlines, and winner selection details will be published before any giveaway launches.
+  <section id="community">
+    <h2 class="section-title">Join the Community</h2>
+    <p class="subtitle">Meet other gamers and follow future PRIZEN announcements.</p>
+    <!-- Replace the # below with your real Discord invite URL. -->
+    <a class="btn" href="#" onclick="alert('Discord invite coming soon!'); return false;">Discord — Coming Soon</a>
+  </section>
+
+  <section id="rules">
+    <h2 class="section-title">Giveaway Information</h2>
+    <div class="card rules">
+      <p>• Every giveaway must have published official rules.</p>
+      <p>• Check eligibility, closing dates and how winners are selected.</p>
+      <p>• Never share your password or pay a fee to claim a prize.</p>
+      <p>• No giveaway on this page is open until its official details are published.</p>
     </div>
   </section>
 </main>
 
 <footer>
-  <span>© 2026 PRIZEN</span>
-  <span>Built for the community · <a href="#about">About PRIZEN</a></span>
+  <div class="logo">PRI<span>ZEN</span></div>
+  <p>Gaming. Community. Rewards.</p>
+  <p>© 2026 PRIZEN. All rights reserved.</p>
 </footer>
 </body>
 </html>
