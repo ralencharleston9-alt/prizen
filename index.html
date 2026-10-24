@@ -4,264 +4,361 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#09090d">
-<meta name="description" content="PRIZEN — gaming, community and rewards. Discover upcoming giveaways and community events.">
-<title>PRIZEN | Gaming & Rewards</title>
+<meta name="theme-color" content="#09070f">
+<meta name="description" content="PRIZEN Gaming Community and Rewards">
+<title>PRIZEN — Gaming & Community</title>
 <style>
 :root {
-  --bg:#09090d; --panel:#12121b; --panel2:#191725;
-  --purple:#a36bff; --white:#faf8ff; --muted:#aaa5ba;
-  --line:#30263e; --green:#91edc0;
+  --bg:#09070f;
+  --panel:#15111f;
+  --purple:#9b5cff;
+  --light:#cbb0ff;
+  --text:#f8f6ff;
+  --muted:#aaa4bb;
+  --border:#30233f;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{margin:0;background:var(--bg);color:var(--white);
-font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:system-ui,-apple-system,sans-serif;line-height:1.6
+}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer}
-header{position:sticky;top:0;z-index:10;background:#09090dec;
-backdrop-filter:blur(16px);border-bottom:1px solid #282230}
-.nav{max-width:1120px;margin:auto;padding:17px 22px;display:flex;
-align-items:center;justify-content:space-between;gap:15px}
-.logo{font-size:25px;font-weight:950;letter-spacing:3px}
-.logo span,.purple{color:var(--purple)}
-nav{display:flex;align-items:center;gap:23px;font-size:13px;color:var(--muted)}
-nav a:hover{color:white}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
-border:1px solid transparent;border-radius:9px;padding:12px 17px;
-font-weight:750;font-size:13px;transition:.2s}
-.btn.primary{background:var(--purple);color:#100a1a}
-.btn.primary:hover{transform:translateY(-2px);filter:brightness(1.1)}
-.btn.ghost{background:#ffffff08;border-color:#453650}
-.btn.disabled{opacity:.55;cursor:not-allowed}
-.hero{position:relative;overflow:hidden;text-align:center;padding:105px 20px 95px;
-background:radial-gradient(ellipse at 50% 0%,#48257475,transparent 60%)}
-.hero:before{content:"";position:absolute;width:350px;height:350px;
-border:1px solid #a36bff15;border-radius:50%;top:5px;left:50%;
-transform:translateX(-50%);pointer-events:none}
-.eyebrow{display:inline-block;border:1px solid #6a438c;border-radius:30px;
-padding:8px 13px;font-size:10px;letter-spacing:2px;color:#ddc8ff;
-background:#a36bff0c}
-h1{font-size:clamp(46px,9vw,88px);line-height:.98;letter-spacing:-4px;
-margin:27px 0 20px;font-weight:950}
-h1 span{color:var(--purple)}
-.hero p{max-width:570px;margin:0 auto;color:var(--muted);line-height:1.8;font-size:15px}
-.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:28px}
-.mini-stats{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;
-margin-top:53px;color:var(--muted);font-size:11px;letter-spacing:1px}
-.mini-stats strong{display:block;color:white;font-size:15px;letter-spacing:0;margin-bottom:5px}
-.wrap{max-width:1120px;margin:auto;padding:66px 22px}
-.section-head{display:flex;align-items:end;justify-content:space-between;
-gap:20px;margin-bottom:25px}
-.kicker{color:var(--purple);font-size:10px;font-weight:850;letter-spacing:2px}
-h2{font-size:clamp(25px,5vw,36px);letter-spacing:-1px;margin:8px 0}
-.sub{color:var(--muted);font-size:13px;line-height:1.7;margin:0}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
-.card{background:linear-gradient(145deg,#171521,#101016);border:1px solid var(--line);
-border-radius:16px;padding:23px;transition:transform .2s,border-color .2s}
-.card:hover{transform:translateY(-3px);border-color:#71509a}
-.prize{height:115px;border-radius:11px;display:grid;place-items:center;
-font-size:47px;margin-bottom:20px;
-background:radial-gradient(circle at 50% 45%,#7542a544,#21192e 75%)}
-.status{display:inline-block;font-size:9px;letter-spacing:1.5px;font-weight:850;
-color:#d9baff;background:#a36bff18;border:1px solid #6e4a8c;
-border-radius:5px;padding:6px 8px}
-.card h3{font-size:19px;margin:13px 0 8px}
-.card p{color:var(--muted);font-size:12px;line-height:1.8;min-height:44px}
-.card .btn{width:100%;margin-top:8px}
-.notice{border:1px solid #46345d;background:#a36bff0b;border-radius:12px;
-padding:16px 18px;color:#d2c5e4;font-size:12px;line-height:1.8;margin-top:22px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.feature{padding:28px;border-radius:16px;border:1px solid var(--line);
-background:linear-gradient(140deg,#191526,#101015)}
-.feature .icon{font-size:27px}
-.feature h3{margin:15px 0 8px}
-.feature p{color:var(--muted);font-size:13px;line-height:1.8}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:23px}
-.step{padding:18px;border:1px solid var(--line);border-radius:12px;background:#ffffff04}
-.step b{display:block;margin-bottom:8px}
-.step p{font-size:12px;color:var(--muted);line-height:1.7;margin:0}
-.faq details{border-bottom:1px solid var(--line);padding:17px 0}
-.faq summary{cursor:pointer;font-weight:700;font-size:14px}
-.faq details p{color:var(--muted);font-size:13px;line-height:1.8}
-.community{text-align:center;padding:53px 20px;border:1px solid var(--line);
-border-radius:18px;background:radial-gradient(ellipse at top,#48257450,transparent 70%),#12111a}
-.community p{max-width:470px;margin:12px auto 20px;color:var(--muted);line-height:1.8;font-size:13px}
-footer{border-top:1px solid var(--line);padding:30px 22px}
-.foot{max-width:1120px;margin:auto;display:flex;justify-content:space-between;
-align-items:center;gap:20px;flex-wrap:wrap}
-.foot p{font-size:11px;color:var(--muted);line-height:1.8}
-.foot-links{display:flex;gap:18px;font-size:12px;color:var(--muted)}
-.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);
-opacity:0;pointer-events:none;background:#21182f;border:1px solid #704da0;
-padding:13px 18px;border-radius:10px;font-size:13px;z-index:30;transition:.25s;
-width:max-content;max-width:90%}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:720px){
- nav{gap:12px}nav a{font-size:11px}.nav{padding:14px}
- .nav .btn{padding:9px;font-size:11px}
- .hero{padding:80px 17px 65px}h1{letter-spacing:-2.5px}
- .grid{grid-template-columns:1fr}
- .card{padding:18px}.prize{height:90px}
- .two,.steps{grid-template-columns:1fr}
- .wrap{padding:48px 17px}.section-head{align-items:start;flex-direction:column}
- .mini-stats{gap:23px}
+.container{width:min(1100px,calc(100% - 32px));margin:auto}
+header{
+  position:sticky;top:0;z-index:10;
+  background:#09070fee;backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border)
 }
-@media(prefers-reduced-motion:reduce){
- *,*:before,*:after{scroll-behavior:auto!important;transition:none!important}
+nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-weight:950;font-size:23px;letter-spacing:2px}
+.logo span{color:var(--purple)}
+.navlinks{display:flex;gap:22px;align-items:center}
+.navlinks a{color:var(--muted);font-size:14px}
+.navlinks a:hover{color:white}
+.menu{display:none}
+.btn{
+  display:inline-flex;justify-content:center;align-items:center;
+  gap:8px;padding:12px 17px;border-radius:12px;
+  border:1px solid var(--border);background:var(--panel);
+  color:white;font-weight:750;cursor:pointer;text-align:center
+}
+.btn:hover{border-color:var(--purple)}
+.primary{background:linear-gradient(135deg,#a66bff,#7031d5);border-color:transparent}
+.hero{
+  padding:90px 0 65px;
+  background:radial-gradient(ellipse at 75% 25%,#722bd22c,transparent 48%)
+}
+.badge{
+  display:inline-block;border:1px solid #7049a5;border-radius:30px;
+  color:var(--light);padding:6px 12px;font-size:12px;letter-spacing:1px
+}
+h1{font-size:clamp(43px,8vw,78px);line-height:1.03;letter-spacing:-2.5px;margin:23px 0}
+.gradient{background:linear-gradient(90deg,#fff,#c7a4ff,#9852ff);background-clip:text;color:transparent}
+p{color:var(--muted)}
+.hero p{max-width:610px;font-size:18px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:45px}
+.stat,.card{
+  border:1px solid var(--border);background:linear-gradient(145deg,#191425,#100d17);
+  border-radius:18px;padding:21px
+}
+.stat strong{display:block;font-size:20px}
+.stat small{color:var(--muted)}
+section{padding:65px 0}
+.eyebrow{color:var(--light);font-size:12px;font-weight:850;letter-spacing:2px}
+h2{font-size:clamp(29px,4vw,43px);line-height:1.15;margin:8px 0 12px}
+.section-intro{max-width:600px;margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.icon{
+  width:49px;height:49px;border-radius:14px;display:grid;place-items:center;
+  background:#8d4de822;border:1px solid #7049a5;font-size:24px;margin-bottom:17px
+}
+.card h3{margin:0 0 8px}
+.card p{font-size:14px;min-height:65px}
+.card .btn{width:100%;margin-top:8px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.filter{
+  border:1px solid var(--border);background:var(--panel);color:var(--muted);
+  padding:8px 13px;border-radius:25px
+}
+.filter.active{background:#7638ba;color:white;border-color:var(--purple)}
+.search{
+  width:100%;padding:12px;border-radius:10px;border:1px solid var(--border);
+  background:var(--panel);color:white;margin:10px 0
+}
+.art{
+  display:grid;place-items:center;min-height:115px;border-radius:13px;
+  background:radial-gradient(ellipse,#7031d53b,transparent),#0d0a14;
+  font-size:43px;margin-bottom:17px
+}
+.tag{font-size:11px;color:var(--light);letter-spacing:1px;font-weight:800}
+.cta{
+  padding:35px;border-radius:22px;border:1px solid #7546aa;
+  background:radial-gradient(ellipse at 85% 20%,#7130bd33,transparent 55%),#15101f
+}
+.faq{display:grid;gap:11px;max-width:800px}
+details{padding:17px;border:1px solid var(--border);border-radius:13px;background:var(--panel)}
+summary{cursor:pointer;font-weight:750}
+details p{font-size:14px;margin-bottom:0}
+footer{padding:28px 0;border-top:1px solid var(--border);font-size:13px}
+.footer{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.notice{font-size:12px}
+#toast{
+  display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+  background:#211832;border:1px solid var(--purple);padding:12px 16px;
+  border-radius:12px;z-index:30;max-width:90%
+}
+@media(max-width:760px){
+  .menu{display:inline-block}
+  .navlinks{
+    display:none;position:absolute;top:72px;left:0;right:0;
+    padding:20px;background:#0e0b16;border-bottom:1px solid var(--border);
+    flex-direction:column;align-items:stretch
+  }
+  .navlinks.open{display:flex}
+  .navlinks a{padding:8px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero{padding-top:65px}
+}
+@media(max-width:500px){
+  .grid{grid-template-columns:1fr}
+  .stats{gap:7px}
+  .stat{padding:12px}
+  .stat strong{font-size:15px}
+  .stat small{font-size:10px}
+  .hero p{font-size:16px}
+  .actions .btn{width:100%}
+  .cta{padding:22px}
 }
 </style>
 </head>
 <body>
+
 <header>
-  <div class="nav">
-    <a class="logo" href="#home" aria-label="PRIZEN home">PRI<span>ZEN</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#giveaways">Giveaways</a>
-      <a href="#about">About</a>
+  <nav class="container">
+    <a href="#home" class="logo">P<span>RIZEN</span></a>
+    <button class="btn menu" id="menuButton" aria-expanded="false">☰ Menu</button>
+    <div class="navlinks" id="navLinks">
+      <a href="#features">Features</a>
+      <a href="#rewards">Rewards</a>
+      <a href="#how">How it works</a>
       <a href="#faq">FAQ</a>
-    </nav>
-    <button class="btn primary" onclick="comingSoon()">Join PRIZEN ↗</button>
-  </div>
+      <a href="#community">Community</a>
+    </div>
+    <a class="btn primary" href="https://discord.gg/fM473UkS5" target="_blank" rel="noopener">Join Discord ↗</a>
+  </nav>
 </header>
 
-<main id="home">
-  <section class="hero">
-    <span class="eyebrow">THE NEXT GENERATION OF REWARDS</span>
-    <h1>PLAY YOUR GAME.<br><span>CHASE THE WIN.</span></h1>
-    <p>Welcome to PRIZEN — a growing gaming community built around events,
-    future giveaways, and shared wins. Your next chapter starts here.</p>
+<main>
+<section class="hero" id="home">
+  <div class="container">
+    <span class="badge">✦ THE PRIZEN COMMUNITY</span>
+    <h1>YOUR GAME.<br><span class="gradient">YOUR COMMUNITY.</span></h1>
+    <p>Welcome to PRIZEN — a premium gaming community built for players, creators, community events, and reward announcements.</p>
     <div class="actions">
-      <a class="btn primary" href="#giveaways">Explore Giveaways ↘</a>
-      <button class="btn ghost" onclick="comingSoon()">Community Discord ↗</button>
+      <a class="btn primary" href="https://discord.gg/fM473UkS5" target="_blank" rel="noopener">✦ Join PRIZEN</a>
+      <a class="btn" href="#rewards">Explore Rewards ↓</a>
     </div>
-    <div class="mini-stats">
-      <div><strong>GAMING</strong>Community first</div>
-      <div><strong>REWARDS</strong>Events coming soon</div>
-      <div><strong>PRIZEN</strong>Built for players</div>
+    <div class="stats">
+      <div class="stat"><strong>GAMING</strong><small>Play together</small></div>
+      <div class="stat"><strong>COMMUNITY</strong><small>Connect and chat</small></div>
+      <div class="stat"><strong>REWARDS</strong><small>Discover events</small></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="wrap" id="giveaways">
-    <div class="section-head">
-      <div>
-        <div class="kicker">THE REWARD HUB</div>
-        <h2>Featured Giveaways</h2>
-        <p class="sub">Upcoming ideas. Official entries aren't open yet.</p>
-      </div>
-      <span class="status">LAUNCH PREVIEW</span>
-    </div>
+<section id="features">
+  <div class="container">
+    <div class="eyebrow">THE EXPERIENCE</div>
+    <h2>More than a server.</h2>
+    <p class="section-intro">Your home for gaming, conversations, announcements, and community activities.</p>
     <div class="grid">
       <article class="card">
-        <div class="prize" aria-hidden="true">🎮</div>
-        <span class="status">COMING SOON</span>
-        <h3>Gaming Rewards</h3>
-        <p>Future gaming-related prizes, with eligibility and official details announced before launch.</p>
-        <button class="btn ghost" onclick="comingSoon()">Entries not open</button>
+        <div class="icon">🎮</div>
+        <h3>Gaming</h3>
+        <p>Find players, share clips, discuss games, and discover community activities.</p>
+        <a class="btn community-link" href="https://discord.gg/fM473UkS5" target="_blank" rel="noopener">Join gaming chat ↗</a>
       </article>
       <article class="card">
-        <div class="prize" aria-hidden="true">💜</div>
-        <span class="status">COMING SOON</span>
-        <h3>Community Events</h3>
-        <p>Community challenges and special events. No winner or prize has been announced.</p>
-        <button class="btn ghost" onclick="comingSoon()">Details coming soon</button>
+        <div class="icon">🎁</div>
+        <h3>Reward Events</h3>
+        <p>Check official announcements for event rules, eligibility, deadlines, and available rewards.</p>
+        <a class="btn community-link" href="https://discord.gg/fM473UkS5" target="_blank" rel="noopener">Check announcements ↗</a>
       </article>
       <article class="card">
-        <div class="prize" aria-hidden="true">✦</div>
-        <span class="status">COMING SOON</span>
-        <h3>Special Drops</h3>
-        <p>Future PRIZEN announcements with published deadlines, rules and entry instructions.</p>
-        <button class="btn ghost" onclick="comingSoon()">Not available yet</button>
+        <div class="icon">🤖</div>
+        <h3>PRIZEN Bot</h3>
+        <p>Community commands, moderation, and event features can be connected when the bot is configured.</p>
+        <button class="btn" id="botButton">Bot information</button>
       </article>
     </div>
-    <div class="notice">
-      <strong>Launch notice:</strong> These are preview listings, not active promotions.
-      No entry is being collected and no prize is currently promised. Official rules
-      will be published before any giveaway opens.
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section class="wrap" id="about">
-    <div class="kicker">WHY PRIZEN</div>
-    <h2>More than a giveaway page.</h2>
-    <p class="sub">A clean home for gaming, community, and future rewards.</p>
-    <div class="two" style="margin-top:24px">
-      <article class="feature">
-        <div class="icon">◈</div>
-        <h3>Built for the community</h3>
-        <p>One place for announcements, gaming events and future community activities.</p>
+<section id="rewards">
+  <div class="container">
+    <div class="eyebrow">REWARDS HUB</div>
+    <h2>Discover what's happening.</h2>
+    <p class="section-intro">Search and filter the categories below, then visit Discord for actual announcements.</p>
+    <input class="search" id="search" type="search" placeholder="Search gaming, community, rewards..." aria-label="Search categories">
+    <div class="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="gaming">Gaming</button>
+      <button class="filter" data-filter="community">Community</button>
+      <button class="filter" data-filter="rewards">Rewards</button>
+    </div>
+    <div class="grid" id="rewardGrid">
+      <article class="card reward" data-category="gaming" data-search="gaming matches players events">
+        <div class="art">🎮</div><span class="tag">GAMING</span>
+        <h3>Gaming Events</h3>
+        <p>Look for gaming sessions, community matches, and event announcements.</p>
+        <a class="btn community-link" href="https://discord.gg/fM473UkS5" target="_blank" rel="noopener">Explore Discord ↗</a>
       </article>
-      <article class="feature">
-        <div class="icon">✧</div>
-        <h3>Clear reward details</h3>
-        <p>Future promotions should include eligibility, deadlines, selection rules and how winners are notified.</p>
+      <article class="card reward" data-category="community" data-search="community conversations members">
+        <div class="art">✦</div><span class="tag">COMMUNITY</span>
+        <h3>Meet the Community</h3>
+        <p>Join conversations, meet other players, and find your place in PRIZEN.</p>
+        <a class="btn community-link" href="https://discord.gg/fM473UkS5" target="_blank" rel="noopener">Meet everyone ↗</a>
+      </article>
+      <article class="card reward" data-category="rewards" data-search="rewards giveaways announcements">
+        <div class="art">🎁</div><span class="tag">REWARDS</span>
+        <h3>Reward Announcements</h3>
+        <p>Review official event information before entering. Active rewards are not guaranteed.</p>
+        <a class="btn community-link" href="https://discord.gg/fM473UkS5" target="_blank" rel="noopener">View updates ↗</a>
       </article>
     </div>
-    <div class="steps">
-      <div class="step"><b><span class="purple">01.</span> Discover</b><p>Browse published events and their official rules.</p></div>
-      <div class="step"><b><span class="purple">02.</span> Participate</b><p>Follow the instructions once a real event is open.</p></div>
-      <div class="step"><b><span class="purple">03.</span> Stay updated</b><p>Check official PRIZEN announcements for results.</p></div>
-    </div>
-  </section>
+    <p id="empty" style="display:none">No matching categories found.</p>
+    <p class="notice">This website does not claim that any giveaway is currently active or guarantee a prize.</p>
+  </div>
+</section>
 
-  <section class="wrap" id="community">
-    <div class="community">
-      <div class="kicker">YOUR PEOPLE. YOUR COMMUNITY.</div>
-      <h2>PRIZEN Discord</h2>
-      <p>Our Discord community is still being prepared. The invite will be activated here when the server is ready for members.</p>
-      <button class="btn primary" onclick="comingSoon()">Discord — Coming Soon</button>
+<section id="how">
+  <div class="container">
+    <div class="eyebrow">GET STARTED</div>
+    <h2>Three steps. One community.</h2>
+    <div class="grid">
+      <article class="card"><div class="icon">↗</div><h3>01. Join</h3><p>Enter the official PRIZEN Discord server.</p><a class="btn community-link" href="https://discord.gg/fM473UkS5" target="_blank" rel="noopener">Join Discord ↗</a></article>
+      <article class="card"><div class="icon">📣</div><h3>02. Explore</h3><p>Read the rules and check community announcements.</p><a class="btn community-link" href="https://discord.gg/fM473UkS5" target="_blank" rel="noopener">Open community ↗</a></article>
+      <article class="card"><div class="icon">✓</div><h3>03. Participate</h3><p>Follow the published instructions for any activity or event.</p><a class="btn" href="#faq">Read the FAQ ↓</a></article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="wrap faq" id="faq">
-    <div class="kicker">NEED TO KNOW</div>
-    <h2>Frequently Asked Questions</h2>
-    <details>
-      <summary>Are any giveaways open right now?</summary>
-      <p>No. This is a launch preview. An event will be clearly marked open only after its rules and entry process are ready.</p>
-    </details>
-    <details>
-      <summary>How do I enter a future giveaway?</summary>
-      <p>Each official listing will explain eligibility, how to enter, the closing date, and how the winner will be selected.</p>
-    </details>
-    <details>
-      <summary>Is the Discord server ready?</summary>
-      <p>Not yet. The community button will be activated when the server is ready to welcome members.</p>
-    </details>
-    <details>
-      <summary>Will PRIZEN ever ask for my password?</summary>
-      <p>No. Never share account passwords, login codes, or payment information to claim a prize. Be cautious of impersonators.</p>
-    </details>
-    <details>
-      <summary>How will winners be notified?</summary>
-      <p>Each future giveaway's official rules will explain the notification method and the deadline to respond.</p>
-    </details>
-  </section>
+<section id="community">
+  <div class="container">
+    <div class="cta">
+      <div class="eyebrow">YOUR NEXT LOBBY AWAITS</div>
+      <h2>Make it <span class="gradient">PRIZEN.</span></h2>
+      <p>Gaming, community, and announcements in one place. Come join us.</p>
+      <div class="actions">
+        <a class="btn primary community-link" href="https://discord.gg/fM473UkS5" target="_blank" rel="noopener">Join PRIZEN Discord ↗</a>
+        <button class="btn" id="copyButton">Copy Discord invite</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="eyebrow">QUESTIONS</div>
+    <h2>Frequently asked questions.</h2>
+    <div class="faq">
+      <details><summary>What is PRIZEN?</summary><p>A gaming and community project with announcements and community activities.</p></details>
+      <details><summary>How do I join?</summary><p>Tap any Join Discord button. If the invitation is invalid, create a new invite in your Discord server and update the link in this file.</p></details>
+      <details><summary>Are rewards guaranteed?</summary><p>No. Check official event details, eligibility, and terms. This page does not promise prizes.</p></details>
+      <details><summary>Does the website run the bot?</summary><p>No. A Discord bot needs its own application and running host. Never publish your bot token in website code.</p></details>
+      <details><summary>Will PRIZEN ask for my password?</summary><p>Never share your Discord password, account token, or recovery codes with a bot or another user.</p></details>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
-  <div class="foot">
-    <div>
-      <a class="logo" href="#home">PRI<span>ZEN</span></a>
-      <p>Gaming. Community. Rewards.<br>© 2026 PRIZEN. All rights reserved.</p>
-    </div>
-    <div class="foot-links">
-      <a href="#giveaways">Giveaways</a>
-      <a href="#faq">FAQ</a>
-      <a href="#community">Discord</a>
-    </div>
+  <div class="container footer">
+    <a href="#home" class="logo">P<span>RIZEN</span></a>
+    <span>© <span id="year"></span> PRIZEN Community</span>
+    <a class="community-link" href="https://discord.gg/fM473UkS5" target="_blank" rel="noopener">Discord ↗</a>
   </div>
+  <div class="container notice">Third-party names and services belong to their respective owners.</div>
 </footer>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
 <script>
-let toastTimer;
-function comingSoon(){
-  const t=document.getElementById("toast");
-  t.textContent="PRIZEN is still preparing for launch. Check back soon!";
-  t.classList.add("show");
-  clearTimeout(toastTimer);
-  toastTimer=setTimeout(()=>t.classList.remove("show"),3200);
-}
+(function(){
+  "use strict";
+
+  const INVITE = "https://discord.gg/fM473UkS5";
+  const $ = id => document.getElementById(id);
+  $("year").textContent = new Date().getFullYear();
+
+  // Mobile menu
+  $("menuButton").addEventListener("click", function(){
+    const open = $("navLinks").classList.toggle("open");
+    this.setAttribute("aria-expanded", String(open));
+    this.textContent = open ? "✕ Close" : "☰ Menu";
+  });
+
+  document.querySelectorAll("#navLinks a").forEach(link => {
+    link.addEventListener("click", () => $("navLinks").classList.remove("open"));
+  });
+
+  // All Discord buttons use the configured invitation.
+  document.querySelectorAll(".community-link").forEach(link => {
+    link.href = INVITE;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  });
+
+  // Search and filters
+  let activeFilter = "all";
+  const rewardCards = Array.from(document.querySelectorAll(".reward"));
+
+  function updateRewards(){
+    const term = $("search").value.toLowerCase().trim();
+    let count = 0;
+    rewardCards.forEach(card => {
+      const categoryMatch = activeFilter === "all" || card.dataset.category === activeFilter;
+      const searchMatch = (card.dataset.search + " " + card.innerText).toLowerCase().includes(term);
+      const show = categoryMatch && searchMatch;
+      card.style.display = show ? "" : "none";
+      if(show) count++;
+    });
+    $("empty").style.display = count ? "none" : "block";
+  }
+
+  document.querySelectorAll(".filter").forEach(button => {
+    button.addEventListener("click", () => {
+      activeFilter = button.dataset.filter;
+      document.querySelectorAll(".filter").forEach(item => item.classList.toggle("active", item === button));
+      updateRewards();
+    });
+  });
+  $("search").addEventListener("input", updateRewards);
+
+  // Feedback message
+  let toastTimeout;
+  function toast(message){
+    $("toast").textContent = message;
+    $("toast").style.display = "block";
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => $("toast").style.display = "none", 3000);
+  }
+
+  $("copyButton").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(INVITE);
+      toast("Discord invite copied!");
+    } catch(error) {
+      toast("Copy unavailable here. Tap Join Discord instead.");
+    }
+  });
+
+  $("botButton").addEventListener("click", () => {
+    toast("The PRIZEN bot installation link will be added when the bot is configured.");
+  });
+})();
 </script>
 </body>
 </html>
